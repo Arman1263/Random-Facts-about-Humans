@@ -22,3 +22,6 @@ You will need a web browser to view the website. No additional software is requi
 
    ```bash
    git clone https://github.com/your-username/fun-facts-about-humans.git
+
+2. Live preview:
+   https://monumental-toffee-1d1cb3.netlify.app/
