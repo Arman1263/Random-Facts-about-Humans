@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Facts About Humans</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa; /* Light blue background */
+            color: #0077b6; /* Human blue color for text */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        button {
+            background-color: #0077b6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #005f8a;
+        }
+
+        .fact-display {
+            margin-top: 20px;
+            font-size: 18px;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fun Facts About Humans</h1>
+        <button id="factButton">Show a Fun Fact</button>
+        <div id="factDisplay" class="fact-display"></div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const facts = [
+                "Humans are the only animals that blush.",
+                "The human brain is the most energy-consuming organ, using up to 20% of the body's total energy.",
+                "Humans share 99.9% of their DNA with every other human.",
+                "The human nose can detect about 1 trillion different scents.",
+                "Humans are the only species known to produce tears from emotions.",
+                "The average human body contains enough fat to make seven bars of soap.",
+                "Humans have unique fingerprints, but they also have unique tongue prints.",
+                "The human skeleton renews itself completely every 10 years.",
+                "Humans are the only animals that can draw straight lines.",
+                "The human eye can distinguish about 10 million different colors.",
+                "Humans are the only species that cook their food.",
+                "The average person will walk the equivalent of five times around the world in their lifetime.",
+                "Humans have a 'diving reflex' that allows them to hold their breath underwater longer than on land.",
+                "The human body contains about 37.2 trillion cells.",
+                "Humans are the only animals with chins."
+            ];
+
+            const factButton = document.getElementById('factButton');
+            const factDisplay = document.getElementById('factDisplay');
+
+            factButton.addEventListener('click', () => {
+                const randomIndex = Math.floor(Math.random() * facts.length);
+                factDisplay.textContent = facts[randomIndex];
+                factDisplay.style.opacity = 1;
+            });
+        });
+    </script>
+</body>
+</html>
